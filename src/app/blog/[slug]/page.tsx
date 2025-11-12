@@ -5,7 +5,7 @@ import NotionRenderer from '@/components/NotionRenderer';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
-export const revalidate = 3600; // ISR per post
+export const revalidate = 10; // ISR every 10 seconds
 
 type Props = { params: Promise<{ slug: string }> };
 

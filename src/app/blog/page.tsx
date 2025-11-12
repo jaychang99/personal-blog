@@ -1,7 +1,7 @@
 import { getPosts } from '@/lib/notion';
 import Link from 'next/link';
 
-export const revalidate = 3600; // ISR hourly
+export const revalidate = 10; // ISR every 10 seconds
 
 export default async function BlogIndex() {
   const posts = await getPosts();
