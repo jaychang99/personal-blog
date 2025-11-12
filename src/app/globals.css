@@ -1,8 +1,15 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+}
+
+/* small niceties for articles */
+.prose :where(img):not(:where([class~='not-prose'] *)) {
+  margin: 2rem auto;
+  border-radius: 0.75rem;
 }
 
 @theme inline {
